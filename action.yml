@@ -1,0 +1,18 @@
+name: 'trigger-jenkins'
+description: 'Invoke Jenkins job'
+inputs:
+  jenkins_url:
+    description: "Jenkins URL including http/https protocol"
+    required: true
+  jenkins_job:
+    description: "Jenkins job name to build"
+    required: true
+  jenkins_user:
+    description: "Jenkins username"
+    required: false
+  jenkins_token:
+    description: "Jenkins API token"
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
